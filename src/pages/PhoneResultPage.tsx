@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
-import { Phone, AlertTriangle, CheckCircle, AlertCircle, ArrowLeft } from 'lucide-react';
+import { Phone, AlertTriangle, CheckCircle, AlertCircle, ArrowLeft, MessageSquare, Link as LinkIcon } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
