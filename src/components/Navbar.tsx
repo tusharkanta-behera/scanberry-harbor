@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Shield, AlertCircle, MessageSquare, Link as LinkIcon, Phone, User, LogOut } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import { ThemeToggle } from './ThemeToggle';
 
 const Navbar = () => {
   const location = useLocation();
@@ -40,7 +41,7 @@ const Navbar = () => {
   };
   
   return (
-    <nav className="bg-white shadow-sm py-4 px-6">
+    <nav className="bg-background border-b border-border py-4 px-6 transition-colors duration-300">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="text-xl font-bold text-scanberry-primary flex items-center">
           <Shield className="mr-2" />
@@ -53,7 +54,7 @@ const Navbar = () => {
               <Link 
                 to="/dashboard" 
                 className={`px-3 py-2 rounded-md transition-colors duration-200 flex items-center ${
-                  isActive('/dashboard') ? 'bg-scanberry-primary text-white' : 'text-scanberry-text hover:bg-gray-100'
+                  isActive('/dashboard') ? 'bg-scanberry-primary text-white' : 'text-foreground hover:bg-accent'
                 }`}
               >
                 <User className="mr-1 h-4 w-4" />
@@ -111,8 +112,9 @@ const Navbar = () => {
               </Link>
             </div>
             
-            <div className="flex items-center gap-2">
-              <span className="text-sm hidden md:inline">{userEmail}</span>
+            <div className="flex items-center gap-4">
+              <ThemeToggle />
+              <span className="text-sm hidden md:inline text-foreground">{userEmail}</span>
               <Button 
                 variant="outline" 
                 size="sm" 
@@ -125,6 +127,7 @@ const Navbar = () => {
           </>
         ) : (
           <div className="flex items-center space-x-4">
+            <ThemeToggle />
             <Link to="/login">
               <Button variant="outline" size="sm">Log in</Button>
             </Link>
