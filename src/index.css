@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -156,16 +157,16 @@
 }
 
 @keyframes scanning {
-  '0%': { width: '0%' },
-  '100%': { width: '100%' }
+  0% { width: 0%; }
+  100% { width: 100%; }
 }
 
 @keyframes pulse-blue {
-  '0%, 100%': { 
-    opacity: '1'
-  },
-  '50%': { 
-    opacity: '0.6'
+  0%, 100% { 
+    opacity: 1;
+  }
+  50% { 
+    opacity: 0.6;
   }
 }
 
