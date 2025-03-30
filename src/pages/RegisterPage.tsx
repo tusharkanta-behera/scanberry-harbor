@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Shield, Mail, Lock, User, Check, AlertTriangle, MailCheck } from 'lucide-react';
@@ -75,7 +74,7 @@ const RegisterPage = () => {
       
       toast({
         title: "Verification code sent",
-        description: `A verification code has been sent to ${email}`,
+        description: `A verification code has been sent to ${email}. For demo, use 123456.`,
       });
     } catch (error) {
       toast({

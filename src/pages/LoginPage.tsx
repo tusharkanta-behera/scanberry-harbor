@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Shield, LogIn, Mail, Lock, MailCheck, AlertTriangle, Check, X } from 'lucide-react';
@@ -50,11 +49,10 @@ const LoginPage = () => {
     
     toast({
       title: "Verification code sent",
-      description: `A verification code has been sent to ${email}`,
+      description: `A verification code has been sent to ${email}. For demo, use 123456.`,
     });
     
-    // For demo purposes, we'll use a fixed code "123456"
-    // In a real app, this would be sent to the user's email
+    // For demo purposes, we're using a fixed code "123456"
   };
 
   // When user submits the first step (email + password)

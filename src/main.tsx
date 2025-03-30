@@ -1,11 +1,11 @@
 
-import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
-import { ThemeProvider } from './components/ThemeProvider.tsx'
+import { createRoot } from 'react-dom/client';
+import App from './App.tsx';
+import './index.css';
+import { ThemeProvider } from './components/ThemeProvider.tsx';
 
 createRoot(document.getElementById("root")!).render(
-  <ThemeProvider defaultTheme="system">
+  <ThemeProvider defaultTheme="system" storageKey="scanberry-theme">
     <App />
   </ThemeProvider>
 );
