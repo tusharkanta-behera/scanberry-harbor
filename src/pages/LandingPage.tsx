@@ -154,12 +154,14 @@ const LandingPage = () => {
       </div>
 
       {/* Add animation keyframes */}
-      <style jsx>{`
-        @keyframes fadeInOut {
-          0%, 100% { opacity: 0; transform: translateY(10px); }
-          50% { opacity: 0.3; transform: translateY(0); }
-        }
-      `}</style>
+      <style>
+        {`
+          @keyframes fadeInOut {
+            0%, 100% { opacity: 0; transform: translateY(10px); }
+            50% { opacity: 0.3; transform: translateY(0); }
+          }
+        `}
+      </style>
     </div>
   );
 };
